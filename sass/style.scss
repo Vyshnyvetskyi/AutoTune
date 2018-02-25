@@ -1,0 +1,149 @@
+@import "reset.css";
+@import "my.css";
+
+$color-general: #101116;
+
+$color-page: #f3f4f8;
+
+$color-white: #ffffff;
+
+$color-gray: #dcdde1;
+
+$color-red: #f42121;
+
+$color-gray1: #959595;
+
+.container{
+	max-width: 1274px;
+	margin: 0 auto;
+	overflow: hidden;
+	}
+hr.Rline{
+	border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}	
+
+.header_info{
+	display: flex;
+	justify-content: space-between;
+	padding: 12px 0 12px 0;
+	&_left{
+		display: flex;
+		justify-content: flex-start;
+		&_style{
+			margin-right: 43px;
+			&_i{
+				color: $color-red;
+				margin-left: 4px;
+				width: 17px;
+				height: 17px;
+			}
+			&_text{
+				font-family: "Ubuntu", sans-serif;
+				font-size: 14px;
+				color: $color-general;
+
+			}
+		}
+	}
+	&_right{
+		display: flex;
+		justify-content: flex-end;
+		&_style{
+			ul{
+				font-family: "Ubuntu", sans-serif;
+				font-size: 16px;
+				color: $color-gray1;
+    			list-style: none;
+    			position: relative;
+    			float: right;
+				//    margin-right: 60px;
+    			display: inline-table;
+				padding: 0px 8px;
+  }
+   ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+//   ul li:hover{background: rgba(0,0,0,.15);}
+   ul li:hover > ul{display: block;}
+		
+   ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+		ul li span{
+        display: block; 
+//      padding: 30px 20px;
+        color: #222; 
+        font-size: .9em;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+		ul li span:hover{color:$color-red;}
+			
+		ul ul{
+        display: none;
+        background: #fff;
+        position: absolute; 
+        top: 100%;
+        box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+		border: 1px solid rgba(0,0,0,.1);
+      }
+		ul ul li{float: none; position: relative;}
+		ul ul li span {
+		padding: 8px 0px; 
+//        border-bottom: 1px solid rgba(0,0,0,.05);
+          }
+		ul ul ul {
+        position: absolute; 
+        left: 100%; 
+        top:0;
+          }	
+		}
+	}
+}	
+.header_container{
+	display:flex;
+	justify-content: space-between;
+	padding: 40px 0;
+	&_logo{
+		display: flex;
+		justify-content: flex-start;
+		}
+	&_navbar{
+		display: flex;
+		justify-content: space-between;
+			&_categories{
+				width: 180px;
+				height: 45px;
+				border: 1px solid #cccccc;
+				}
+			&_form{
+				height: 41px;
+				width: 278px;
+				border: 1px solid #cccccc;
+   				border-left:1px solid #fff;
+				}
+	
+		}
+
+	}
+.fa-search{
+    background: #f42121;
+    width: 50px;
+	height: 43px;
+	
+}
+.fa-search:hover{
+	    color: white;
+		background-color: black;
+}

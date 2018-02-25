@@ -1,0 +1,118 @@
+.icon-1, .icon-2, .icon-3 {
+  position: absolute;
+  right: 18%;
+  top: 48%;
+  width: 32px;
+  height: 3px;
+  background-color: black;
+  transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
+}
+
+.icon-1 {
+  transform: translateY(-8px);
+  animation-delay: 100ms;
+}
+
+.icon-3 {
+  transform: translateY(8px);
+  animation-delay: 250ms;
+}
+
+.hamburger-icon {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 37px;
+  right: 3%;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hamburger-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-1.a {
+  transform: rotate(40deg);
+}
+
+.icon-3.b {
+  transform: rotate(-40deg);
+}
+
+.icon-2.c {
+  opacity: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+nav {
+  background: #efefef;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  z-index: 10;
+  opacity: 0;
+  transition: all 600ms cubic-bezier(0.62, 0.04, 0.3, 1.56);
+  transition-delay: 100ms;
+}
+
+nav ul {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  right: 17%;
+}
+
+.t {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: regular;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  line-height: 2.2;
+}
+
+nav.show {
+  width: 240px;
+  opacity: 1;
+}
+
+.dark-blue.slide {
+  width: 50%;
+  opacity: 1;
+}
+
+@keyframes shotup {
+  0% {
+    transform: translateY(300%);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
